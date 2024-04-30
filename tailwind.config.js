@@ -28,7 +28,8 @@ export default {
         '132' : '33rem',
         '76' : '18.9rem',
         '928' : '928px',
-        '900' : '900px'
+        '900' : '900px',
+        '27' : '6.8rem'
       },
       borderRadius: {
         'large': '35%'

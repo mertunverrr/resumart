@@ -10,7 +10,7 @@ function Information() {
       <ProgressBar />
       <Heading />
       <div>
-        <div className="container mt-10 border-2 w-928 rounded-md">
+        <div className="container mt-10 border-2 w-928 rounded-md shadow-md">
           <InformationHeadings />
           <BasicInfo />
         </div>

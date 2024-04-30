@@ -9,4 +9,7 @@
     .card{
         @apply px-44 
     }
+    .my-input{
+        @apply border-2 border-gray-300 py-1.5 pl-2 outline-mypurple text-offblack tracking-wide rounded-md font-medium text-sm
+    }
 }
