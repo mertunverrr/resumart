@@ -12,4 +12,11 @@
     .my-input{
         @apply border-2 border-gray-300 py-1.5 pl-2 outline-mypurple text-offblack tracking-wide rounded-md font-medium text-sm
     }
+    .next-button{
+        @apply bg-mypurple w-32 py-2 rounded-md text-white font-semibold tracking-wide text-lg hover:brightness-125 duration-500
+    }
+    .back-button{
+        @apply bg-white w-32 border-mypurple border-2 text-mypurple font-semibold tracking-wide rounded-md text-lg hover:brightness-90 duration-500
+    }
+
 }

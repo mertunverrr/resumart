@@ -62,9 +62,7 @@ function BasicInfo() {
             />
           </div>
           <div className="flex justify-end">
-            <button className="bg-mypurple py-2 px-10 rounded-md text-white font-semibold tracking-wide text-xl -mt-8 hover:brightness-125 duration-500">
-              İleri
-            </button>
+            <button className="next-button -mt-8">İleri</button>
           </div>
         </div>
       </form>
