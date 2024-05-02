@@ -21,7 +21,11 @@ export default {
       colors:{
         mypurple: "#755BB4",
         lightgrey: "hsl(0, 0%, 86%)",
-        offblack: "hsl(0, 0%, 8%)"
+        offblack: "hsl(0, 0%, 8%)",
+        colorA: "#333",
+        bgInput: "#eee",
+        colorBorder: "#ccc",
+        toggleColor: "#fff"
       },
       spacing: {
         '160' : '40rem',
@@ -29,11 +33,22 @@ export default {
         '76' : '18.9rem',
         '928' : '928px',
         '900' : '900px',
-        '27' : '6.8rem'
+        '27' : '6.8rem',
+        '768' : '768px',
+        '120' : '30rem',
       },
       borderRadius: {
-        'large': '35%'
-      }
+        'large': '35%',
+        'topLeft' : '150px',
+        'bottomLeft' : '100px'
+      },
+      width: {
+        '200%' : '200%'
+      },
+      translate : {
+        '200%' : '200%'
+      },
+      
     },
   },
   plugins: [],

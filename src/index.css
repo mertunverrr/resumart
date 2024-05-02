@@ -18,5 +18,8 @@
     .back-button{
         @apply bg-white w-32 border-mypurple border-2 text-mypurple font-semibold tracking-wide rounded-md text-lg hover:brightness-90 duration-500
     }
+    .add-button{
+        @apply bg-white border-2 border-mypurple w-full py-2 rounded-md text-mypurple font-semibold tracking-wide text-lg hover:brightness-125 duration-500 hover:bg-mypurple hover:text-white
+    }
 
 }
