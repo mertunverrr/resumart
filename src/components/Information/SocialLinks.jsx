@@ -3,11 +3,11 @@ import { BsTrash } from "react-icons/bs";
 
 function SocialLinks() {
   return (
-    <div className="py-2 px-6 flex flex-col space-y-4">
-      <div className="flex flex-row space-x-8">
+    <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
+      <div className="flex flex-row space-x-2 lg:space-x-8">
         <div className="flex flex-col basis-1/5">
           <label className="font-bold text-offblack text-sm mb-2 ml-1">
-            Sosyal Medya Adı
+            Sosyal Medya
           </label>
           <select className="my-input">
             <option value="github">GitHub</option>
@@ -17,7 +17,7 @@ function SocialLinks() {
             <option value="instagram">Instagram</option>
           </select>
         </div>
-        <div className="flex flex-col basis-4/5">
+        <div className="flex flex-col basis-3/5">
           <label className="font-bold text-offblack text-sm mb-2 ml-1">
             Link URL
           </label>

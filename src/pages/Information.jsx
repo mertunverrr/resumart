@@ -14,9 +14,11 @@ function Information() {
       <ProgressBar />
       <Heading />
       <div>
-        <div className="container mt-10 border-2 w-928 rounded-md shadow-md">
+        <div className="container mt-5 lg:mt-8 border-2 lg:w-928 rounded-md shadow-md">
           <InformationHeadings />
-          <SocialLinks />
+          <div className="mt-4 md:mt-0">
+            <BasicInfo />
+          </div>
         </div>
       </div>
     </div>

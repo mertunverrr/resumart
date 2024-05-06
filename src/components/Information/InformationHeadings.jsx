@@ -3,7 +3,7 @@ import React from "react";
 function InformationHeadings() {
   return (
     <div>
-      <ul className="flex justify-around text-gray-400 border-b-2 relative my-4 pb-2">
+      <ul className="flex justify-around text-gray-400 border-b-2 relative my-4 pb-2 hidden md:flex">
         <li className="group relative cursor-pointer font-semibold text-sm hover:text-gray-500">
           Temel Bilgiler
           <hr className="absolute border-transparent border-2 w-full top-7 group-hover:border-gray-300" />

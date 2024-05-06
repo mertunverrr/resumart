@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImg from "../../assets/hero.jpg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -11,9 +12,12 @@ function Hero() {
               Online ve ücretsiz bir şekilde CV oluşturun
             </h2>
             <div className="flex justify-center lg:justify-normal">
-              <button className="mt-4 lg:mt-8 font-semibold text-white w-60 lg:w-3/5 p-3 bg-mypurple rounded-md hover:brightness-125 tracking-wider">
+              <Link
+                to="/resume-builder"
+                className="mt-4 lg:mt-8 font-semibold text-white w-60 lg:w-3/5 p-3 bg-mypurple rounded-md hover:brightness-125 tracking-wider text-center"
+              >
                 CV Hazırlamaya Başla
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center">
@@ -24,13 +28,13 @@ function Hero() {
           </div>
         </div>
         <div className="flex justify-around mt-8 lg:mt-20">
-          <button className="bg-violet-400 w-44 lg:w-60 text-center py-3 text-white rounded-3xl cursor-default font-semibold text-sm">
+          <button className="bg-gradient-to-r from-indigo-400 to-mypurple w-44 lg:w-60 text-center py-3 text-white rounded-3xl cursor-default font-semibold text-sm">
             Kayıt olmaya gerek yok
           </button>
-          <button className="bg-violet-400 w-44 lg:w-60 text-center py-3  text-white rounded-3xl cursor-default font-semibold text-sm">
+          <button className="bg-gradient-to-b from-mypurple to-indigo-400 w-44 lg:w-60 text-center py-3  text-white rounded-3xl cursor-default font-semibold text-sm">
             Hızlı ve kolay
           </button>
-          <button className="bg-violet-400 w-44 lg:w-60 text-center py-3  text-white rounded-3xl cursor-default font-semibold text-sm">
+          <button className="bg-gradient-to-r from-mypurple to-indigo-400 w-44 lg:w-60 text-center py-3  text-white rounded-3xl cursor-default font-semibold text-sm">
             Ücretsiz hazır şablonlar
           </button>
         </div>

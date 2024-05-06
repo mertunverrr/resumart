@@ -4,7 +4,7 @@ import { BsTrash } from "react-icons/bs";
 function SkillLangProject() {
   return (
     <div className="px-6 pb-4 flex flex-col space-y-4">
-      <div className="flex flex-row space-x-8">
+      <div className="flex flex-col lg:flex-row lg:space-x-8">
         <div className="flex flex-col basis-1/2">
           <h2 className="font-bold text-xl text-offblack">Yetenekler</h2>
           <div className="flex flex-row justify-around basis-1/2 mt-4 space-x-6">
@@ -37,7 +37,7 @@ function SkillLangProject() {
           <button className="add-button mt-4">Ekle</button>
         </div>
 
-        <div className="flex flex-col basis-1/2">
+        <div className="flex flex-col basis-1/2 mt-6 lg:mt-0">
           <h2 className="font-bold text-xl text-offblack">Diller</h2>
           <div className="flex flex-row justify-around basis-1/2 mt-4 space-x-6">
             <div className="flex flex-col basis-1/2">
