@@ -1,9 +1,11 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../redux/progressbarSlice";
+import { updateField } from "../../redux/formSlice";
 
 function EducationInfo() {
   const dispatch = useDispatch();
+  const formData = useSelector((store) => store.form);
 
   return (
     <div className="py-2 px-6">
@@ -17,6 +19,12 @@ function EducationInfo() {
               type="text"
               placeholder="Ankara University"
               className="my-input"
+              value={formData.schoolname}
+              onChange={(e) =>
+                dispatch(
+                  updateField({ field: "schoolName", value: e.target.value })
+                )
+              }
             />
           </div>
           <div className="flex flex-col basis-1/2">
@@ -27,6 +35,12 @@ function EducationInfo() {
               type="text"
               placeholder="Computer Engineering"
               className="my-input"
+              value={formData.bachelorName}
+              onChange={(e) =>
+                dispatch(
+                  updateField({ field: "bachelorName", value: e.target.value })
+                )
+              }
             />
           </div>
         </div>
@@ -41,6 +55,15 @@ function EducationInfo() {
               className="my-input"
               min="1970-01-01"
               max="2024-12-31"
+              value={formData.bachelorStartDate}
+              onChange={(e) =>
+                dispatch(
+                  updateField({
+                    field: "bachelorStartDate",
+                    value: e.target.value,
+                  })
+                )
+              }
             />
           </div>
           <div className="flex flex-col basis-1/2">
@@ -53,6 +76,15 @@ function EducationInfo() {
               className="my-input"
               min="1970-01-01"
               max="2029-12-31"
+              value={formData.bachelorEndDate}
+              onChange={(e) =>
+                dispatch(
+                  updateField({
+                    field: "bachelorEndDate",
+                    value: e.target.value,
+                  })
+                )
+              }
             />
           </div>
         </div>

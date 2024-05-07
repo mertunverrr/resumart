@@ -1,9 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { increment } from "../../redux/progressbarSlice";
+import { updateField } from "../../redux/formSlice";
 
 function BasicInfo() {
   const dispatch = useDispatch();
+  const formData = useSelector((store) => store.form);
+
+  console.log(formData);
 
   return (
     <div className="py-2 px-6">
@@ -13,7 +17,17 @@ function BasicInfo() {
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               İsim - Soyisim
             </label>
-            <input type="text" placeholder="Jack Spear" className="my-input" />
+            <input
+              type="text"
+              placeholder="Jack Spear"
+              className="my-input"
+              value={formData.fullName}
+              onChange={(e) =>
+                dispatch(
+                  updateField({ field: "fullName", value: e.target.value })
+                )
+              }
+            />
           </div>
           <div className="flex flex-col">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
@@ -23,6 +37,12 @@ function BasicInfo() {
               type="text"
               placeholder="Frontend Developer"
               className="my-input"
+              value={formData.jobTitle}
+              onChange={(e) =>
+                dispatch(
+                  updateField({ field: "jobTitle", value: e.target.value })
+                )
+              }
             />
           </div>
           <div className="flex flex-row space-x-6">
@@ -34,13 +54,29 @@ function BasicInfo() {
                 type="text"
                 placeholder="jackspear@resumart.com"
                 className="my-input"
+                value={formData.email}
+                onChange={(e) =>
+                  dispatch(
+                    updateField({ field: "email", value: e.target.value })
+                  )
+                }
               />
             </div>
             <div className="flex flex-col basis-1/2">
               <label className="font-bold text-offblack text-sm mb-2 ml-1">
                 Şehir
               </label>
-              <input type="text" placeholder="İstanbul" className="my-input" />
+              <input
+                type="text"
+                placeholder="İstanbul"
+                className="my-input"
+                value={formData.city}
+                onChange={(e) =>
+                  dispatch(
+                    updateField({ field: "city", value: e.target.value })
+                  )
+                }
+              />
             </div>
           </div>
         </div>
@@ -63,6 +99,10 @@ function BasicInfo() {
               type="text"
               placeholder="123 321 45 54"
               className="my-input"
+              value={formData.tel}
+              onChange={(e) =>
+                dispatch(updateField({ field: "tel", value: e.target.value }))
+              }
             />
           </div>
         </div>
