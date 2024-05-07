@@ -17,14 +17,18 @@ function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [resetPassword, setResetPassword] = useState(false);
+  const [check, setCheck] = useState(true);
 
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
       if (!email || !password) {
+        setCheck(false);
         return;
       }
-      signInWithEmailAndPassword(auth, email, password);
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => setCheck(true))
+        .catch(() => setCheck(false));
     },
     [email, password]
   );
@@ -81,17 +85,30 @@ function SignIn() {
             type="email"
             placeholder="Email"
             value={email}
-            className="bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+            className={
+              check
+                ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+            }
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
-            className="bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+            className={
+              check
+                ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+            }
             onChange={(e) => setPassword(e.target.value)}
           />
-          <a onClick={() => setResetPassword(true)} href="#">
+          {!check && (
+            <span className="text-xs text-red-500">
+              Lütfen emailinizi veya şifrenizi kontrol ediniz
+            </span>
+          )}
+          <a onClick={() => setResetPassword(true)} href="#" className="mt-3">
             Şifrenizi mi unuttunuz?
           </a>
           <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">

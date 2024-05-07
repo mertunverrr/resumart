@@ -1,7 +1,10 @@
 import React from "react";
 import { BsTrash } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { increment, decrement } from "../../redux/progressbarSlice";
 
 function SkillLangProject() {
+  const dispatch = useDispatch();
   return (
     <div className="px-6 pb-4 flex flex-col space-y-4">
       <div className="flex flex-col lg:flex-row lg:space-x-8">
@@ -70,8 +73,12 @@ function SkillLangProject() {
         </div>
       </div>
       <div className="flex flex-row justify-between">
-        <button className="back-button">Geri</button>
-        <button className="next-button">İleri</button>
+        <button className="back-button" onClick={() => dispatch(decrement())}>
+          Geri
+        </button>
+        <button className="next-button" onClick={() => dispatch(increment())}>
+          İleri
+        </button>
       </div>
     </div>
   );

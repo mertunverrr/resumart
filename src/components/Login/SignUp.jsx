@@ -6,15 +6,18 @@ function SignUp({ setActive }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [check, setCheck] = useState(true);
 
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault();
       if (!email || !password || !name) {
+        setCheck(false);
         return;
       }
       createUserWithEmailAndPassword(auth, email, password).then((auth) => {
         setActive(false);
+        setCheck(true);
         updateProfile(auth.user, { displayName: name });
         alert("Başarılı bir şekilde kayıt oldunuz");
         setName("");
@@ -55,7 +58,12 @@ function SignUp({ setActive }) {
         className="bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
+      {!check && (
+        <span className="text-xs text-red-500">
+          Lütfen alanları eksiksiz ve hatasız doldurunuz.
+        </span>
+      )}
+      <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-3 cursor-pointer rounded-lg">
         Kayıt Ol
       </button>
     </form>

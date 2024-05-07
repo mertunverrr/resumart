@@ -7,8 +7,10 @@ import EducationInfo from "../components/Information/EducationInfo";
 import ExperienceInfo from "../components/Information/ExperienceInfo";
 import SkillLangProject from "../components/Information/SkillLangProject";
 import SocialLinks from "../components/Information/SocialLinks";
+import { useSelector } from "react-redux";
 
 function Information() {
+  const state = useSelector((store) => store.progressbar);
   return (
     <div>
       <ProgressBar />
@@ -17,7 +19,11 @@ function Information() {
         <div className="container mt-5 lg:mt-8 border-2 lg:w-928 rounded-md shadow-md">
           <InformationHeadings />
           <div className="mt-4 md:mt-0">
-            <BasicInfo />
+            {state.value === 0 && <BasicInfo />}
+            {state.value === 1 && <EducationInfo />}
+            {state.value === 2 && <ExperienceInfo />}
+            {state.value === 3 && <SkillLangProject />}
+            {state.value === 4 && <SocialLinks />}
           </div>
         </div>
       </div>

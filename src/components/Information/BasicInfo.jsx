@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { increment } from "../../redux/progressbarSlice";
 
 function BasicInfo() {
+  const dispatch = useDispatch();
+
   return (
     <div className="py-2 px-6">
       <form className="flex flex-col lg:flex-row lg:space-x-10">
@@ -65,7 +69,9 @@ function BasicInfo() {
       </form>
 
       <div className="flex justify-end mt-4">
-        <button className="next-button">İleri</button>
+        <button className="next-button" onClick={() => dispatch(increment())}>
+          İleri
+        </button>
       </div>
     </div>
   );
