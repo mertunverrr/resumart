@@ -7,6 +7,7 @@ import EducationInfo from "../components/Information/EducationInfo";
 import ExperienceInfo from "../components/Information/ExperienceInfo";
 import SkillLangProject from "../components/Information/SkillLangProject";
 import SocialLinks from "../components/Information/SocialLinks";
+import DownloadCv from "../components/Information/DownloadCv";
 import { useSelector } from "react-redux";
 
 function Information() {
@@ -24,6 +25,7 @@ function Information() {
             {state.value === 2 && <ExperienceInfo />}
             {state.value === 3 && <SkillLangProject />}
             {state.value === 4 && <SocialLinks />}
+            {state.value === 5 && <DownloadCv />}
           </div>
         </div>
       </div>

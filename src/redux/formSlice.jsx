@@ -6,12 +6,23 @@ const initialState = {
   email: "",
   city: "",
   tel: "",
+  birthYear: "",
+  drivingLicense: "",
+  cvPicture: "",
+  aboutMe: "",
   schoolName: "",
   bachelorName: "",
   bachelorStartDate: "",
   bachelorEndDate: "",
+  gradutionGrade: "",
   experience: [
-    { companyName: "", companyJobTitle: "", jobStartDate: "", jobEndDate: "" },
+    {
+      companyName: "",
+      companyJobTitle: "",
+      jobStartDate: "",
+      jobEndDate: "",
+      jobDesc: "",
+    },
   ],
   skills: [
     {

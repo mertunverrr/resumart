@@ -120,6 +120,27 @@ function ExperienceInfo() {
                 />
               </div>
             </div>
+            <div className="flex flex-col basis-1/2">
+              <label className="font-bold text-offblack text-sm mb-2 ml-1">
+                İş Tanımı ( Opsiyonel )
+              </label>
+              <input
+                type="text"
+                placeholder="During a mandatory internship period of 1 months, I gained experience in the professional world by serving as an intern assistant under our supervisor."
+                className="my-input"
+                value={formData.experience[index].jobDesc}
+                onChange={(e) =>
+                  dispatch(
+                    updateArrayField({
+                      arrayName: "experience",
+                      field: "jobDesc",
+                      value: e.target.value,
+                      index: index,
+                    })
+                  )
+                }
+              />
+            </div>
           </div>
         ))}
         <button className="add-button" onClick={(e) => addExperienceItem(e)}>

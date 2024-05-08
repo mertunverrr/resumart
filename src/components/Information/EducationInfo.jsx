@@ -45,16 +45,16 @@ function EducationInfo() {
           </div>
         </div>
         <div className="flex space-x-10">
-          <div className="flex flex-col basis-1/2">
+          <div className="flex flex-col basis-1/3">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               Başlangıç Tarihi
             </label>
             <input
-              type="date"
-              placeholder="Computer Engineering"
+              type="number"
+              placeholder="2019"
               className="my-input"
-              min="1970-01-01"
-              max="2024-12-31"
+              min="1970"
+              max="2024"
               value={formData.bachelorStartDate}
               onChange={(e) =>
                 dispatch(
@@ -66,21 +66,40 @@ function EducationInfo() {
               }
             />
           </div>
-          <div className="flex flex-col basis-1/2">
+          <div className="flex flex-col basis-1/3">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               Bitiş Tarihi
             </label>
             <input
-              type="date"
-              placeholder="Computer Engineering"
+              type="number"
+              placeholder="2023"
               className="my-input"
-              min="1970-01-01"
-              max="2029-12-31"
+              min="1970"
+              max="2029"
               value={formData.bachelorEndDate}
               onChange={(e) =>
                 dispatch(
                   updateField({
                     field: "bachelorEndDate",
+                    value: e.target.value,
+                  })
+                )
+              }
+            />
+          </div>
+          <div className="flex flex-col basis-1/3">
+            <label className="font-bold text-offblack text-sm mb-2 ml-1">
+              Mezuniyet Notu
+            </label>
+            <input
+              type="text"
+              placeholder="3.24 / 4.00"
+              className="my-input"
+              value={formData.gradutionGrade}
+              onChange={(e) =>
+                dispatch(
+                  updateField({
+                    field: "gradutionGrade",
                     value: e.target.value,
                   })
                 )

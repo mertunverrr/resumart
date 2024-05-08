@@ -7,12 +7,20 @@ function BasicInfo() {
   const dispatch = useDispatch();
   const formData = useSelector((store) => store.form);
 
+  const handleFileUpload = (file) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const fileUrl = reader.result; // Dosyanın URL'si
+      dispatch(updateField({ field: "cvPicture", value: fileUrl }));
+    };
+    reader.readAsDataURL(file);
+  };
   console.log(formData);
 
   return (
     <div className="py-2 px-6">
       <form className="flex flex-col lg:flex-row lg:space-x-10">
-        <div className="flex flex-col basis-1/2 space-y-4">
+        <div className="flex flex-col basis-1/2 space-y-4 lg:mt-4">
           <div className="flex flex-col">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               İsim - Soyisim
@@ -80,18 +88,16 @@ function BasicInfo() {
             </div>
           </div>
         </div>
-        <div className="basis-1/2 flex mt-6 lg:mt-0 lg:flex-col lg:space-y-12">
-          <div className="flex flex-col basis-1/2 lg:basis-2/3 justify-center items-center relative">
-            <label className="font-medium text-white text-xs absolute text-center  cursor-pointer">
-              Resim yükle <br /> (jpg, jpeg, png)
-            </label>
+        <div className="basis-1/2 flex-row mt-6 lg:mt-0 lg:flex-col lg:space-y-4">
+          <div className="flex flex-col basis-1/2 lg:basis-2/3 justify-center items-center relative lg:-mb-4">
             <input
               type="file"
               accept=".jpg, .jpeg, .png"
-              className=" w-27 h-27 rounded-full cursor-pointer bg-mypurple hover:brightness-125 duration-300 file:hover:cursor-pointer file:opacity-0 text-white"
+              className="w-24 h-24 bg-mypurple rounded-full cursor-pointer py-9 px-0.5 "
+              onChange={(e) => handleFileUpload(e.target.files[0])}
             />
           </div>
-          <div className="flex flex-col justify-center lg:justify-normal basis-1/2 lg:basis-1/3 ">
+          <div className="flex flex-col justify-center lg:justify-normal basis-1/2 lg:basis-1/3">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               Telefon
             </label>
@@ -105,8 +111,64 @@ function BasicInfo() {
               }
             />
           </div>
+          <div className="flex flex-row space-x-6 mt-4 lg:mt-0">
+            <div className="flex flex-col basis-1/2">
+              <label className="font-bold text-offblack text-sm mb-2 ml-1">
+                Doğum Yılı
+              </label>
+              <input
+                type="text"
+                placeholder="2001"
+                className="my-input"
+                value={formData.birthyear}
+                onChange={(e) =>
+                  dispatch(
+                    updateField({ field: "birthyear", value: e.target.value })
+                  )
+                }
+              />
+            </div>
+            <div className="flex flex-col basis-1/2">
+              <label className="font-bold text-offblack text-sm mb-2 ml-1">
+                Ehliyet
+              </label>
+              <input
+                type="text"
+                placeholder="B"
+                className="my-input"
+                value={formData.drivingLicense}
+                onChange={(e) =>
+                  dispatch(
+                    updateField({
+                      field: "drivingLicense",
+                      value: e.target.value,
+                    })
+                  )
+                }
+              />
+            </div>
+          </div>
         </div>
       </form>
+      <div className="flex flex-col mt-4">
+        <label className="font-bold text-offblack text-sm mb-2 ml-1">
+          Hakkımda
+        </label>
+        <input
+          type="text"
+          placeholder="I'm Mert Ünver. I graduated from university in 2023. Throughout university, I had the opportunity to develop myself by participating in various training programs. Currently, I am actively looking for full-time employment."
+          className="my-input"
+          value={formData.aboutMe}
+          onChange={(e) =>
+            dispatch(
+              updateField({
+                field: "aboutMe",
+                value: e.target.value,
+              })
+            )
+          }
+        />
+      </div>
 
       <div className="flex justify-end mt-4">
         <button className="next-button" onClick={() => dispatch(increment())}>

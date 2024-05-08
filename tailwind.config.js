@@ -16,7 +16,8 @@ export default {
     
     extend: {
       fontFamily:{
-        manrope:['Manrope' , 'sans-serif']
+        manrope:['Manrope' , 'sans-serif'],
+        montserrat:['Montserrat' , 'sans-serif']
       },
       colors:{
         mypurple: "#755BB4",

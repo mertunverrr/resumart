@@ -5,6 +5,7 @@ import { changeValue } from "../../redux/progressbarSlice";
 function InformationHeadings() {
   const state = useSelector((store) => store.progressbar);
   const dispatch = useDispatch();
+  console.log(state.value);
   return (
     <div>
       <ul className="justify-around text-gray-400 border-b-2 relative my-4 pb-2 hidden md:flex">
@@ -88,6 +89,23 @@ function InformationHeadings() {
           <hr
             className={
               state.value === 4
+                ? "absolute border-mypurple border-2 w-full top-7"
+                : "absolute border-transparent border-2 w-full top-7 group-hover:border-gray-300"
+            }
+          />
+        </li>
+        <li
+          className={
+            state.value === 5
+              ? "group relative cursor-pointer font-extrabold text-sm text-mypurple"
+              : "group relative cursor-pointer font-semibold text-sm hover:text-gray-500"
+          }
+          onClick={() => dispatch(changeValue(5))}
+        >
+          İndir
+          <hr
+            className={
+              state.value === 5
                 ? "absolute border-mypurple border-2 w-full top-7"
                 : "absolute border-transparent border-2 w-full top-7 group-hover:border-gray-300"
             }

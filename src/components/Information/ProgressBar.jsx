@@ -8,7 +8,11 @@ function ProgressBar() {
     <div className="relative container mt-10 lg:mt-20 w-8/12">
       <hr className="border-8 rounded-lg max-w-full" />
       <hr
-        className={`absolute top-0 border-8 rounded-lg border-mypurple maw-w-full w-${state.value}/5`}
+        className={
+          state.value === 5
+            ? "absolute top-0 border-8 rounded-lg border-green-600 w-full"
+            : `absolute top-0 border-8 rounded-lg border-mypurple w-${state.value}/5`
+        }
       />
     </div>
   );
