@@ -1,68 +1,62 @@
 import React from "react";
-import { BsTrash } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../redux/progressbarSlice";
 import { addArrayItem, updateArrayField } from "../../redux/formSlice";
+import { BsTrash } from "react-icons/bs";
 
-function SocialLinks() {
+function Projects() {
   const formData = useSelector((store) => store.form);
-  const addSocialLink = (e) => {
+  const dispatch = useDispatch();
+  const addProject = (e) => {
     e.preventDefault();
     dispatch(
       addArrayItem({
-        arrayName: "socialLinks",
+        arrayName: "projects",
         newItem: {
-          socialMedia: "",
-          link: "",
+          projectName: "",
+          projectDesc: "",
         },
       })
     );
   };
-  console.log(formData.socialLinks);
-  const dispatch = useDispatch();
+
   return (
     <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
-      {formData.socialLinks.map((socialLink, index) => (
+      {formData.projects.map((project, index) => (
         <div className="flex flex-row space-x-2 lg:space-x-8" key={index}>
           <div className="flex flex-col basis-1/5">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
-              Sosyal Medya
+              Proje İsmi
             </label>
-            <select
+            <input
+              type="text"
               className="my-input"
-              value={formData.socialLinks[index].socialMedia}
+              value={formData.projects[index].projectName}
               onChange={(e) =>
                 dispatch(
                   updateArrayField({
-                    arrayName: "socialLinks",
-                    field: "socialMedia",
+                    arrayName: "projects",
+                    field: "projectName",
                     value: e.target.value,
                     index: index,
                   })
                 )
               }
-            >
-              <option value="">Sosyal Medya</option>
-              <option value="github">GitHub</option>
-              <option value="linkedin">LinkedIn</option>
-              <option value="facebook">Facebook</option>
-              <option value="twitter">Twitter</option>
-              <option value="instagram">Instagram</option>
-            </select>
+            ></input>
           </div>
           <div className="flex flex-col basis-3/5">
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
-              Link URL
+              Proje Tanıtımı
             </label>
             <input
               type="text"
               className="my-input"
-              value={formData.socialLinks[index].link}
+              value={formData.projects[index].projectDesc}
               onChange={(e) =>
                 dispatch(
                   updateArrayField({
-                    arrayName: "socialLinks",
-                    field: "link",
+                    arrayName: "projects",
+                    field: "projectDesc",
                     value: e.target.value,
                     index: index,
                   })
@@ -80,7 +74,7 @@ function SocialLinks() {
           </div>
         </div>
       ))}
-      <button className="add-button" onClick={(e) => addSocialLink(e)}>
+      <button className="add-button" onClick={(e) => addProject(e)}>
         Ekle
       </button>
       <div className="flex flex-row justify-between">
@@ -95,4 +89,4 @@ function SocialLinks() {
   );
 }
 
-export default SocialLinks;
+export default Projects;

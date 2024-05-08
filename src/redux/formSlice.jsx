@@ -10,11 +10,15 @@ const initialState = {
   drivingLicense: "",
   cvPicture: "",
   aboutMe: "",
-  schoolName: "",
-  bachelorName: "",
-  bachelorStartDate: "",
-  bachelorEndDate: "",
-  gradutionGrade: "",
+  educationInfo: [
+    {
+      schoolName: "",
+      bachelorName: "",
+      bachelorStartDate: "",
+      bachelorEndDate: "",
+      gradutionGrade: "",
+    },
+  ],
   experience: [
     {
       companyName: "",
@@ -22,6 +26,12 @@ const initialState = {
       jobStartDate: "",
       jobEndDate: "",
       jobDesc: "",
+    },
+  ],
+  projects: [
+    {
+      projectName: "",
+      projectDesc: "",
     },
   ],
   skills: [

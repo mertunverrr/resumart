@@ -68,7 +68,7 @@ function InformationHeadings() {
           }
           onClick={() => dispatch(changeValue(3))}
         >
-          Yetenekler & Diller
+          Projeler
           <hr
             className={
               state.value === 3
@@ -85,7 +85,7 @@ function InformationHeadings() {
           }
           onClick={() => dispatch(changeValue(4))}
         >
-          Sosyal Medya Linkleri
+          Yetenekler & Diller
           <hr
             className={
               state.value === 4
@@ -102,10 +102,27 @@ function InformationHeadings() {
           }
           onClick={() => dispatch(changeValue(5))}
         >
-          İndir
+          Sosyal Medya Linkleri
           <hr
             className={
               state.value === 5
+                ? "absolute border-mypurple border-2 w-full top-7"
+                : "absolute border-transparent border-2 w-full top-7 group-hover:border-gray-300"
+            }
+          />
+        </li>
+        <li
+          className={
+            state.value === 6
+              ? "group relative cursor-pointer font-extrabold text-sm text-mypurple"
+              : "group relative cursor-pointer font-semibold text-sm hover:text-gray-500"
+          }
+          onClick={() => dispatch(changeValue(6))}
+        >
+          İndir
+          <hr
+            className={
+              state.value === 6
                 ? "absolute border-mypurple border-2 w-full top-7"
                 : "absolute border-transparent border-2 w-full top-7 group-hover:border-gray-300"
             }

@@ -5,6 +5,7 @@ import InformationHeadings from "../components/Information/InformationHeadings";
 import BasicInfo from "../components/Information/BasicInfo";
 import EducationInfo from "../components/Information/EducationInfo";
 import ExperienceInfo from "../components/Information/ExperienceInfo";
+import Projects from "../components/Information/Projects";
 import SkillLangProject from "../components/Information/SkillLangProject";
 import SocialLinks from "../components/Information/SocialLinks";
 import DownloadCv from "../components/Information/DownloadCv";
@@ -23,9 +24,10 @@ function Information() {
             {state.value === 0 && <BasicInfo />}
             {state.value === 1 && <EducationInfo />}
             {state.value === 2 && <ExperienceInfo />}
-            {state.value === 3 && <SkillLangProject />}
-            {state.value === 4 && <SocialLinks />}
-            {state.value === 5 && <DownloadCv />}
+            {state.value === 3 && <Projects />}
+            {state.value === 4 && <SkillLangProject />}
+            {state.value === 5 && <SocialLinks />}
+            {state.value === 6 && <DownloadCv />}
           </div>
         </div>
       </div>
