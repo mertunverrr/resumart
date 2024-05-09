@@ -1,7 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../redux/progressbarSlice";
-import { addArrayItem, updateArrayField } from "../../redux/formSlice";
+import {
+  addArrayItem,
+  deleteArrayItem,
+  updateArrayField,
+} from "../../redux/formSlice";
 import { BsTrash } from "react-icons/bs";
 
 function Projects() {
@@ -68,7 +72,17 @@ function Projects() {
             <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
               Sil
             </label>
-            <button className="next-button">
+            <button
+              className="next-button"
+              onClick={() =>
+                dispatch(
+                  deleteArrayItem({
+                    arrayName: "projects",
+                    index: index,
+                  })
+                )
+              }
+            >
               <BsTrash className="text-xl text-center w-full" />
             </button>
           </div>

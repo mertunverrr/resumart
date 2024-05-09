@@ -158,7 +158,6 @@ function BasicInfo() {
           type="text"
           placeholder="I'm Mert Ünver. I graduated from university in 2023. Throughout university, I had the opportunity to develop myself by participating in various training programs. Currently, I am actively looking for full-time employment."
           className="my-input"
-          value={formData.aboutMe}
           onChange={(e) =>
             dispatch(
               updateField({

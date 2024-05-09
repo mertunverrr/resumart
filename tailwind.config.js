@@ -38,7 +38,8 @@ export default {
         '768' : '768px',
         '120' : '30rem',
         '124' : '124px',
-        '18' : '4.5rem'
+        '18' : '4.5rem',
+        '1096' : '1096px'
       },
       borderRadius: {
         'large': '35%',

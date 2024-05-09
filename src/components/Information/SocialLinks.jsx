@@ -2,7 +2,11 @@ import React from "react";
 import { BsTrash } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../redux/progressbarSlice";
-import { addArrayItem, updateArrayField } from "../../redux/formSlice";
+import {
+  addArrayItem,
+  updateArrayField,
+  deleteArrayItem,
+} from "../../redux/formSlice";
 
 function SocialLinks() {
   const formData = useSelector((store) => store.form);
@@ -74,7 +78,17 @@ function SocialLinks() {
             <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
               Sil
             </label>
-            <button className="next-button">
+            <button
+              className="next-button"
+              onClick={() =>
+                dispatch(
+                  deleteArrayItem({
+                    arrayName: "socialLinks",
+                    index: index,
+                  })
+                )
+              }
+            >
               <BsTrash className="text-xl text-center w-full" />
             </button>
           </div>

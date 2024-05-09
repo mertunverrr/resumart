@@ -10,6 +10,12 @@ function Heading() {
           ? "Cv'nizi indirebilirsiniz"
           : "Bize biraz kendinizden bahsedin"}
       </h1>
+      {state.value === 6 && (
+        <p className="text-sm text-center mt-4 -mb-6 underline underline-offset-2">
+          <span className="font-semibold">DipNot: </span>Yetenekler kısmı taşmış
+          gibi gözüküyor fakat pdf ile indirdiğinizde problem çözülecektir.
+        </p>
+      )}
     </div>
   );
 }

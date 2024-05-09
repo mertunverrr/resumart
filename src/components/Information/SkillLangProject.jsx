@@ -2,7 +2,11 @@ import React from "react";
 import { BsTrash } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../../redux/progressbarSlice";
-import { addArrayItem, updateArrayField } from "../../redux/formSlice";
+import {
+  addArrayItem,
+  updateArrayField,
+  deleteArrayItem,
+} from "../../redux/formSlice";
 
 function SkillLangProject() {
   const formData = useSelector((store) => store.form);
@@ -91,7 +95,17 @@ function SkillLangProject() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Sil
                 </label>
-                <button className="next-button w-10">
+                <button
+                  className="next-button w-10"
+                  onClick={() =>
+                    dispatch(
+                      deleteArrayItem({
+                        arrayName: "skills",
+                        index: index,
+                      })
+                    )
+                  }
+                >
                   <BsTrash className="text-xl text-center w-full" />
                 </button>
               </div>
@@ -158,7 +172,17 @@ function SkillLangProject() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Sil
                 </label>
-                <button className="next-button w-10">
+                <button
+                  className="next-button w-10"
+                  onClick={() =>
+                    dispatch(
+                      deleteArrayItem({
+                        arrayName: "languages",
+                        index: index,
+                      })
+                    )
+                  }
+                >
                   <BsTrash className="text-xl text-center w-full" />
                 </button>
               </div>

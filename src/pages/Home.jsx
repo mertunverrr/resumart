@@ -7,7 +7,7 @@ import Footer from "../components/Home/Footer";
 function Home() {
   return (
     <div>
-      <div className="lg:h-screen">
+      <div>
         <Header />
         <Hero />
       </div>

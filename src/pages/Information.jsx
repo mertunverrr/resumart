@@ -10,11 +10,23 @@ import SkillLangProject from "../components/Information/SkillLangProject";
 import SocialLinks from "../components/Information/SocialLinks";
 import DownloadCv from "../components/Information/DownloadCv";
 import { useSelector } from "react-redux";
+import Logo from "../assets/logo-no-background.svg";
+import { Link } from "react-router-dom";
 
 function Information() {
   const state = useSelector((store) => store.progressbar);
   return (
     <div>
+      <div className="w-full flex items-center justify-center">
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="resumart logo"
+            className="w-40 mt-8 cursor-pointer"
+          />
+        </Link>
+      </div>
+
       <ProgressBar />
       <Heading />
       <div>

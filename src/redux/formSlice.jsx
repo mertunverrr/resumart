@@ -70,9 +70,13 @@ export const formSlice = createSlice({
       const { arrayName, newItem } = action.payload;
       state[arrayName].push(newItem);
     },
+    deleteArrayItem: (state, action) => {
+      const { arrayName, index } = action.payload;
+      state[arrayName].splice(index, 1);
+    },
   },
 });
 
-export const { updateField, updateArrayField, addArrayItem } =
+export const { updateField, updateArrayField, addArrayItem, deleteArrayItem } =
   formSlice.actions;
 export default formSlice.reducer;

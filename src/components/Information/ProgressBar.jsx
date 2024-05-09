@@ -5,7 +5,7 @@ function ProgressBar() {
   const state = useSelector((store) => store.progressbar);
 
   return (
-    <div className="relative container mt-10 lg:mt-20 w-8/12">
+    <div className="relative container mt-4 lg:mt-8 w-8/12">
       <hr className="border-8 rounded-lg max-w-full" />
       <hr
         className={
