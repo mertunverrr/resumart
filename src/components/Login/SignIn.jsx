@@ -1,13 +1,11 @@
 import React, { useState, useCallback } from "react";
-import {
-  FaGooglePlusG,
-  FaFacebookSquare,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaGooglePlusG, FaFacebookSquare, FaGithub } from "react-icons/fa";
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+  GithubAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../firebase";
 import { Navigate } from "react-router-dom";
@@ -20,6 +18,8 @@ function SignIn() {
   const [resetPassword, setResetPassword] = useState(false);
   const [check, setCheck] = useState(true);
   const langs = useSelector((store) => store.language);
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
   const handleSubmit = useCallback(
     (e) => {
@@ -51,6 +51,33 @@ function SignIn() {
   if (user) {
     return <Navigate to="/" replace />;
   }
+
+  const googleLogin = async () => {
+    try {
+      const data = await signInWithPopup(auth, googleProvider);
+      const user = data.user;
+      if (user) {
+        return <Navigate to="/" replace />;
+      }
+    } catch (error) {
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      alert(credential);
+    }
+  };
+  const githubLogin = async () => {
+    try {
+      const data = await signInWithPopup(auth, githubProvider);
+      const credential = GithubAuthProvider.credentialFromResult(data);
+      const user = data.user;
+      if (user) {
+        window.location = "/";
+      }
+    } catch (error) {
+      const credential = GithubAuthProvider.credentialFromError(error);
+      alert(credential);
+    }
+  };
+
   return (
     <>
       {langs.lang === "tr" && (
@@ -65,18 +92,15 @@ function SignIn() {
                 <a
                   href="#"
                   className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
+                  onClick={googleLogin}
                 >
                   <FaGooglePlusG />
                 </a>
+
                 <a
                   href="#"
                   className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
-                >
-                  <FaFacebookSquare />
-                </a>
-                <a
-                  href="#"
-                  className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
+                  onClick={githubLogin}
                 >
                   <FaGithub />
                 </a>
