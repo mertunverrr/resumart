@@ -1,8 +1,13 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Logo from "../../assets/logo-no-background.svg";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLang } from "../../redux/languages";
 
 function Footer() {
+  const dispatch = useDispatch();
+  const langs = useSelector((store) => store.language);
+  console.log(langs.lang);
   return (
     <footer className="bg-mypurple p-8">
       <div className="container text-sm text-white flex justify-around">
@@ -15,10 +20,16 @@ function Footer() {
           <p>(c) 2024 All rights are not reserved :)</p>
         </div>
         <div className="flex-row lg:flex space-y-1 lg:space-x-6 lg:space-y-0">
-          <button className="  flex underline bg-transparent hover:text-orange-200 duration-200">
+          <button
+            className="  flex underline underline-offset-2 bg-transparent hover:text-orange-200 duration-200"
+            onClick={() => dispatch(changeLang("tr"))}
+          >
             Türkçe
           </button>
-          <button className=" flex underline bg-transparent hover:text-orange-200 duration-200">
+          <button
+            className=" flex underline underline-offset-2 bg-transparent hover:text-orange-200 duration-200"
+            onClick={() => dispatch(changeLang("eng"))}
+          >
             English
           </button>
         </div>
