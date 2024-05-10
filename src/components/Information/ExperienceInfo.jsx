@@ -126,10 +126,10 @@ function ExperienceInfo() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   İş Tanımı ( Opsiyonel )
                 </label>
-                <input
-                  type="text"
+                <textarea
+                  maxLength={600}
                   placeholder="During a mandatory internship period of 1 months, I gained experience in the professional world by serving as an intern assistant under our supervisor."
-                  className="my-input"
+                  className="my-input h-24"
                   value={formData.experience[index].jobDesc}
                   onChange={(e) =>
                     dispatch(
@@ -264,10 +264,10 @@ function ExperienceInfo() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Job Description (Optional)
                 </label>
-                <input
-                  type="text"
+                <textarea
+                  maxLength={600}
                   placeholder="During a mandatory internship period of 1 months, I gained experience in the professional world by serving as an intern assistant under our supervisor."
-                  className="my-input"
+                  className="my-input h-24"
                   value={formData.experience[index].jobDesc}
                   onChange={(e) =>
                     dispatch(

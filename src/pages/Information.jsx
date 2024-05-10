@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 function Information() {
   const state = useSelector((store) => store.progressbar);
   return (
-    <div>
+    <div className="pb-4 lg:pb-8">
       <div className="w-full flex items-center justify-center">
         <Link to="/">
           <img

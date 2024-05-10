@@ -162,10 +162,11 @@ function BasicInfo() {
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               Hakkımda
             </label>
-            <input
-              type="text"
+            <textarea
+              maxLength={600}
               placeholder="I'm Mert Ünver. I graduated from university in 2023. Throughout university, I had the opportunity to develop myself by participating in various training programs. Currently, I am actively looking for full-time employment."
-              className="my-input"
+              className="my-input h-24"
+              value={formData.aboutMe}
               onChange={(e) =>
                 dispatch(
                   updateField({
@@ -329,10 +330,11 @@ function BasicInfo() {
             <label className="font-bold text-offblack text-sm mb-2 ml-1">
               About Me
             </label>
-            <input
-              type="text"
+            <textarea
+              maxLength={600}
               placeholder="I'm Mert Ünver. I graduated from university in 2023. Throughout university, I had the opportunity to develop myself by participating in various training programs. Currently, I am actively looking for full-time employment."
-              className="my-input"
+              className="my-input h-24"
+              value={formData.aboutMe}
               onChange={(e) =>
                 dispatch(
                   updateField({

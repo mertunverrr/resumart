@@ -7,14 +7,14 @@ function Heading() {
   return (
     <>
       {langs.lang === "tr" && (
-        <div className="container lg:card mt-5 lg:mt-6 lg:flex">
+        <div className="container lg:card mt-5 lg:mt-6 lg:flex lg:flex-col justify-center">
           <h1 className="text-2xl lg:text-5xl text-center font-bold lg:font-extrabold text-offblack">
             {state.value === 6
               ? "Cv'nizi indirebilirsiniz"
               : "Bize biraz kendinizden bahsedin"}
           </h1>
           {state.value === 6 && (
-            <p className="text-sm text-center mt-4 -mb-6 underline underline-offset-2 hidden lg:flex">
+            <p className="text-sm text-center mt-4 justify-center -mb-6 underline underline-offset-2 hidden lg:flex">
               <span className="font-semibold">Not: </span>Yetenekler kısmı
               taşmış gibi gözüküyor fakat pdf ile indirdiğinizde problem
               çözülecektir.
@@ -31,7 +31,7 @@ function Heading() {
           </h1>
           {state.value === 6 && (
             <div>
-              <p className="text-sm text-center mt-4 -mb-6 underline underline-offset-2 hidden lg:flex">
+              <p className="text-sm text-center justify-center mt-4 -mb-6 underline underline-offset-2 hidden lg:flex">
                 <span className="font-semibold">Note: </span>The 'Skills'
                 section seems to be overflowing, but this issue will be resolved
                 when you download it as a PDF.

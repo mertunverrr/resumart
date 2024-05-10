@@ -55,10 +55,10 @@ function Projects() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Proje Tanıtımı
                 </label>
-                <input
-                  type="text"
-                  className="my-input"
-                  value={formData.projects[index].projectDesc}
+                <textarea
+                  maxLength={600}
+                  className="my-input h-9"
+                  value={formData.projects[index].jprojectDesc}
                   onChange={(e) =>
                     dispatch(
                       updateArrayField({
@@ -138,9 +138,9 @@ function Projects() {
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Project Information
                 </label>
-                <input
-                  type="text"
-                  className="my-input"
+                <textarea
+                  maxLength={600}
+                  className="my-input h-9"
                   value={formData.projects[index].projectDesc}
                   onChange={(e) =>
                     dispatch(

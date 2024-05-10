@@ -169,10 +169,12 @@ function SkillLangProject() {
                       }
                     >
                       <option value="x">Seviye</option>
-                      <option value="başlangıç">Başlangıç</option>
-                      <option value="orta seviye">Orta seviye</option>
-                      <option value="ileri seviye">İleri seviye</option>
-                      <option value="uzman">Uzman</option>
+                      <option value="temel">Temel</option>
+                      <option value="konuşkan">Konuşkan</option>
+                      <option value="akıcı konuşabilen">
+                        Akıcı konuşabilen
+                      </option>
+                      <option value="ana dil">Ana dil</option>
                     </select>
                   </div>
                   <div className="flex flex-col basis-2/12 ">
@@ -349,10 +351,10 @@ function SkillLangProject() {
                       }
                     >
                       <option value="y">Level</option>
-                      <option value="beginner">Beginner</option>
-                      <option value="intermediate">Intermediate</option>
-                      <option value="advanced">Advanced</option>
-                      <option value="expert">Expert</option>
+                      <option value="basic">Basic</option>
+                      <option value="conversational">Conversational</option>
+                      <option value="fluent">Fluent</option>
+                      <option value="native">Native</option>
                     </select>
                   </div>
                   <div className="flex flex-col basis-2/12">
