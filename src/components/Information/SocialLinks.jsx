@@ -28,10 +28,10 @@ function SocialLinks() {
   return (
     <>
       {langs.lang === "tr" && (
-        <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
+        <div className="py-2 px-0 lg:px-6 flex flex-col space-y-4">
           {formData.socialLinks.map((socialLink, index) => (
-            <div className="flex flex-row space-x-2 lg:space-x-8" key={index}>
-              <div className="flex flex-col basis-1/5">
+            <div className="flex flex-row space-x-1 lg:space-x-6" key={index}>
+              <div className="flex flex-col basis-4/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Sosyal Medya
                 </label>
@@ -57,8 +57,8 @@ function SocialLinks() {
                   <option value="instagram">Instagram</option>
                 </select>
               </div>
-              <div className="flex flex-col basis-3/5">
-                <label className="font-bold text-offblack text-sm mb-2 ml-1">
+              <div className="flex flex-col basis-6/12">
+                <label className="font-bold text-offblack text-sm mb-2 ml-1 ">
                   Link URL
                 </label>
                 <input
@@ -77,12 +77,12 @@ function SocialLinks() {
                   }
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col basis-2/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Sil
                 </label>
                 <button
-                  className="next-button"
+                  className="remove-button"
                   onClick={() =>
                     dispatch(
                       deleteArrayItem({
@@ -117,10 +117,10 @@ function SocialLinks() {
         </div>
       )}
       {langs.lang === "eng" && (
-        <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
+        <div className="py-2 px-0 lg:px-6 flex flex-col space-y-4">
           {formData.socialLinks.map((socialLink, index) => (
-            <div className="flex flex-row space-x-2 lg:space-x-8" key={index}>
-              <div className="flex flex-col basis-1/5">
+            <div className="flex flex-row space-x-1 lg:space-x-8" key={index}>
+              <div className="flex flex-col basis-4/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Social Media
                 </label>
@@ -146,7 +146,7 @@ function SocialLinks() {
                   <option value="instagram">Instagram</option>
                 </select>
               </div>
-              <div className="flex flex-col basis-3/5">
+              <div className="flex flex-col basis-6/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Link URL
                 </label>
@@ -166,12 +166,12 @@ function SocialLinks() {
                   }
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col basis-2/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Remove
                 </label>
                 <button
-                  className="next-button"
+                  className="remove-button"
                   onClick={() =>
                     dispatch(
                       deleteArrayItem({

@@ -28,7 +28,7 @@ function Login() {
         </Link>
       </div>
       {langs.lang === "tr" && (
-        <div className="bg-white rounded-xl shadow-xl relative overflow-hidden w-768 max-w-full min-h-120">
+        <div className=" bg-white rounded-xl shadow-xl relative overflow-hidden w-768 max-w-full min-h-120">
           <div
             className={`absolute top-0 h-full transition-all ease-in-out duration-500 w-1/2 ${
               active && "translate-x-full opacity-100 z-50"
@@ -43,6 +43,7 @@ function Login() {
           >
             <SignIn />
           </div>
+
           <div
             className={`absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-all ease-in-out duration-500  z-50 ${
               active
@@ -65,7 +66,7 @@ function Login() {
                   Kişisel bilgilerinizi kullanarak giriş yapabilirsiniz
                 </p>
                 <button
-                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
+                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
                   onClick={changeScreenLogin}
                 >
                   Giriş Yap
@@ -81,7 +82,7 @@ function Login() {
                   Kişisel bilgilerinizi kullanarak kayıt olabilirsiniz
                 </p>
                 <button
-                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
+                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
                   onClick={changeScreenRegister}
                 >
                   Kayıt Ol
@@ -92,7 +93,7 @@ function Login() {
         </div>
       )}
       {langs.lang === "eng" && (
-        <div className="bg-white rounded-xl shadow-xl relative overflow-hidden w-768 max-w-full min-h-120">
+        <div className=" bg-white rounded-xl shadow-xl relative overflow-hidden w-768 max-w-full min-h-120">
           <div
             className={`absolute top-0 h-full transition-all ease-in-out duration-500 w-1/2 ${
               active && "translate-x-full opacity-100 z-50"
@@ -107,6 +108,7 @@ function Login() {
           >
             <SignIn />
           </div>
+
           <div
             className={`absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-all ease-in-out duration-500  z-50 ${
               active
@@ -126,10 +128,10 @@ function Login() {
               >
                 <h1 className="text-lg font-medium">Welcome back!</h1>
                 <p className="text-sm trackin-wide my-5">
-                  You can log in using your personal information
+                  You can sign in using your personal information
                 </p>
                 <button
-                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
+                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
                   onClick={changeScreenLogin}
                 >
                   Sign In
@@ -145,7 +147,7 @@ function Login() {
                   You can sign up using your personal information
                 </p>
                 <button
-                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
+                  className="bg-transparent border-white border-2 text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg"
                   onClick={changeScreenRegister}
                 >
                   Sign Up

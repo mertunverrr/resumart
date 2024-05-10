@@ -84,10 +84,12 @@ function SignIn() {
         <>
           {!resetPassword ? (
             <form
-              className="bg-white flex flex-col items-center justify-center px-10 h-full"
+              className="bg-white flex flex-col items-center justify-center px-2 lg:px-10 h-full"
               onSubmit={(e) => handleSubmit(e)}
             >
-              <h1 className="text-xl font-medium text-offblack">Giriş Yap</h1>
+              <h1 className="text-lg lg:text-xl mb-2 lg:mb-1 text-center lg:text-start font-medium text-offblack">
+                Giriş Yap
+              </h1>
               <div className="flex flex-row mt-3 mb-2 text-lg text-mypurple">
                 <a
                   href="#"
@@ -105,7 +107,7 @@ function SignIn() {
                   <FaGithub />
                 </a>
               </div>
-              <span className="text-xs">
+              <span className="text-xs hidden lg:flex">
                 veya giriş yapmak için email kullanabilirsiniz
               </span>
 
@@ -115,8 +117,8 @@ function SignIn() {
                 value={email}
                 className={
                   check
-                    ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
-                    : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    ? "bg-bgInput border-none my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    : "bg-bgInput border-red-500 border-2 my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 }
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -126,8 +128,8 @@ function SignIn() {
                 value={password}
                 className={
                   check
-                    ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
-                    : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    ? "bg-bgInput border-none my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    : "bg-bgInput border-red-500 border-2 my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 }
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -139,23 +141,23 @@ function SignIn() {
               <a
                 onClick={() => setResetPassword(true)}
                 href="#"
-                className="mt-3"
+                className="my-1 lg:mt-3 text-xs lg:text-base"
               >
                 Şifrenizi mi unuttunuz?
               </a>
-              <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
+              <button className="bg-mypurple text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
                 Giriş Yap
               </button>
             </form>
           ) : (
             <form
-              className="bg-white flex flex-col items-center justify-center px-10 h-full"
+              className="bg-white flex flex-col items-center justify-center px-2 lg:px-10 h-full"
               onSubmit={(e) => resetPasswordWithEmail(e)}
             >
-              <h1 className="text-xl font-medium text-offblack">
+              <h1 className="text-lg lg:text-xl font-medium text-offblack text-center lg:text-start mb-2 lg:mb-2">
                 Şifreni yenile
               </h1>
-              <span className="text-xs">
+              <span className="text-xs text-center lg:text-start my-1 lg:my-0">
                 şifrenizi yenilemek için emailinizi giriniz
               </span>
 
@@ -166,7 +168,7 @@ function SignIn() {
                 className="bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
+              <button className="bg-mypurple text-white text-xs py-2 px-1 lg:px-8 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
                 Doğrulama maili gönder
               </button>
               <button
@@ -174,9 +176,9 @@ function SignIn() {
                   e.preventDefault();
                   setResetPassword(false);
                 }}
-                className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-10 cursor-pointer rounded-lg"
+                className="bg-mypurple text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-10 cursor-pointer rounded-lg"
               >
-                Giriş yap
+                Geri
               </button>
             </form>
           )}
@@ -186,31 +188,32 @@ function SignIn() {
         <>
           {!resetPassword ? (
             <form
-              className="bg-white flex flex-col items-center justify-center px-10 h-full"
+              className="bg-white flex flex-col items-center justify-center px-2 lg:px-10 h-full"
               onSubmit={(e) => handleSubmit(e)}
             >
-              <h1 className="text-xl font-medium text-offblack">Sign In</h1>
+              <h1 className="text-lg lg:text-xl mb-2 lg:mb-1 text-center lg:text-start font-medium text-offblack">
+                Sign In
+              </h1>
               <div className="flex flex-row mt-3 mb-2 text-lg text-mypurple">
                 <a
                   href="#"
                   className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
+                  onClick={googleLogin}
                 >
                   <FaGooglePlusG />
                 </a>
+
                 <a
                   href="#"
                   className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
-                >
-                  <FaFacebookSquare />
-                </a>
-                <a
-                  href="#"
-                  className=" border-2 border-mypurple rounded-2xl inline-flex justify-center items-center my-0 mx-1 w-10 h-10"
+                  onClick={githubLogin}
                 >
                   <FaGithub />
                 </a>
               </div>
-              <span className="text-xs">You can also use email to log in</span>
+              <span className="text-xs hidden lg:flex">
+                You can also use email to log in
+              </span>
 
               <input
                 type="email"
@@ -218,8 +221,8 @@ function SignIn() {
                 value={email}
                 className={
                   check
-                    ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
-                    : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    ? "bg-bgInput border-none my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    : "bg-bgInput border-red-500 border-2 my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 }
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -229,8 +232,8 @@ function SignIn() {
                 value={password}
                 className={
                   check
-                    ? "bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
-                    : "bg-bgInput border-red-500 border-2 my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    ? "bg-bgInput border-none my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
+                    : "bg-bgInput border-red-500 border-2 my-1.5 lg:my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 }
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -242,23 +245,23 @@ function SignIn() {
               <a
                 onClick={() => setResetPassword(true)}
                 href="#"
-                className="mt-3"
+                className="my-1 lg:mt-3 text-xs lg:text-base"
               >
                 Did you forget your password?
               </a>
-              <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
+              <button className="bg-mypurple text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
                 Sign In
               </button>
             </form>
           ) : (
             <form
-              className="bg-white flex flex-col items-center justify-center px-10 h-full"
+              className="bg-white flex flex-col items-center justify-center px-2 lg:px-10 h-full"
               onSubmit={(e) => resetPasswordWithEmail(e)}
             >
-              <h1 className="text-xl font-medium text-offblack">
+              <h1 className="text-lg lg:text-xl font-medium text-offblack text-center lg:text-start mb-2 lg:mb-2">
                 Reset your password
               </h1>
-              <span className="text-xs">
+              <span className="text-xs text-center lg:text-start my-1 lg:my-0">
                 please enter your email to reset your password
               </span>
 
@@ -269,7 +272,7 @@ function SignIn() {
                 className="bg-bgInput border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
+              <button className="bg-mypurple text-white text-xs py-2 px-1 lg:px-8 font-semibold tracking-wider uppercase mt-2.5 cursor-pointer rounded-lg">
                 Send verification email
               </button>
               <button
@@ -277,9 +280,9 @@ function SignIn() {
                   e.preventDefault();
                   setResetPassword(false);
                 }}
-                className="bg-mypurple text-white text-xs py-2 px-10 font-semibold tracking-wider uppercase mt-10 cursor-pointer rounded-lg"
+                className="bg-mypurple text-white text-xs py-2 px-6 lg:px-10 font-semibold tracking-wider uppercase mt-10 cursor-pointer rounded-lg"
               >
-                Sign In
+                Back
               </button>
             </form>
           )}

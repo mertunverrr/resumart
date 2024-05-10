@@ -30,7 +30,7 @@ function DownloadCv() {
           </div>
           <div
             ref={contentRef}
-            className="py-2 px-6 flex container font-montserrat text-offblack"
+            className="py-2 px-6 container font-montserrat text-offblack flex"
           >
             <div className="flex flex-col w-1/3 bg-neutral-700 rounded-sm space-y-8 h-1096">
               <div className="items-center flex justify-center">
@@ -229,14 +229,15 @@ function DownloadCv() {
                       <hr
                         className={
                           "border-mypurple border-2 max-w-24 absolute left-20 top-1.5  rounded-lg" +
-                          (formData.skills[index].skillLevel === "beginner"
+                          (formData.skills[index].skillLevel === "başlangıç"
                             ? " w-6"
                             : formData.skills[index].skillLevel ===
-                              "intermediate"
+                              "orta seviye"
                             ? " w-12"
-                            : formData.skills[index].skillLevel === "advanced"
+                            : formData.skills[index].skillLevel ===
+                              "ileri seviye"
                             ? " w-18"
-                            : formData.skills[index].skillLevel === "expert"
+                            : formData.skills[index].skillLevel === "uzman"
                             ? " w-24"
                             : "")
                         }
@@ -248,7 +249,7 @@ function DownloadCv() {
             </div>
           </div>
           <button
-            className="back-button my-2 mx-6 p-1.5"
+            className="bg-white text-mypurple font-medium tracking-wide text-lg p-1 rounded-xl w-1/3 my-4 mx-4 border-2 border-mypurple hover:brightness-110"
             onClick={() => dispatch(decrement())}
           >
             Geri
@@ -267,7 +268,7 @@ function DownloadCv() {
           </div>
           <div
             ref={contentRef}
-            className="py-2 px-6 flex container font-montserrat text-offblack"
+            className="py-2 px-6 container font-montserrat text-offblack flex"
           >
             <div className="flex flex-col w-1/3 bg-neutral-700 rounded-sm space-y-8 h-1096">
               <div className="items-center flex justify-center">
@@ -485,7 +486,7 @@ function DownloadCv() {
             </div>
           </div>
           <button
-            className="back-button my-2 mx-6 p-1.5"
+            className="bg-white text-base text-mypurple font-semibold tracking-wide p-1 rounded-xl w-1/4 my-4 mx-4 border-2 border-mypurple hover:brightness-110"
             onClick={() => dispatch(decrement())}
           >
             Back

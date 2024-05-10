@@ -21,9 +21,9 @@ function BasicInfo() {
   return (
     <>
       {langs.lang === "tr" && (
-        <div className="py-2 px-6">
-          <form className="flex flex-col lg:flex-row lg:space-x-10">
-            <div className="flex flex-col basis-1/2 space-y-4 lg:mt-4">
+        <div className="py-2 px-1 lg:px-6">
+          <form className="flex flex-col lg:flex-row lg:space-x-8">
+            <div className="flex flex-col basis-1/2 space-y-3 lg:space-y-4 lg:mt-4">
               <div className="flex flex-col">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   İsim - Soyisim
@@ -56,7 +56,7 @@ function BasicInfo() {
                   }
                 />
               </div>
-              <div className="flex flex-row space-x-6">
+              <div className="flex flex-row space-x-2 lg:space-x-6">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Email
@@ -116,7 +116,7 @@ function BasicInfo() {
                   }
                 />
               </div>
-              <div className="flex flex-row space-x-6 mt-4 lg:mt-0">
+              <div className="flex flex-row space-x-2 lg:space-x-6 mt-4 lg:mt-0">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Doğum Yılı
@@ -188,9 +188,9 @@ function BasicInfo() {
         </div>
       )}
       {langs.lang === "eng" && (
-        <div className="py-2 px-6">
-          <form className="flex flex-col lg:flex-row lg:space-x-10">
-            <div className="flex flex-col basis-1/2 space-y-4 lg:mt-4">
+        <div className="py-2 px-1 lg:px-6">
+          <form className="flex flex-col lg:flex-row lg:space-x-8">
+            <div className="flex flex-col basis-1/2 space-y-3 lg:space-y-4 lg:mt-4">
               <div className="flex flex-col">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Full Name
@@ -283,7 +283,7 @@ function BasicInfo() {
                   }
                 />
               </div>
-              <div className="flex flex-row space-x-6 mt-4 lg:mt-0">
+              <div className="flex flex-row space-x-2 lg:space-x-6 mt-4 lg:mt-0">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Birth Year

@@ -25,12 +25,12 @@ function ExperienceInfo() {
 
   const dispatch = useDispatch();
   return (
-    <div className="py-2 px-6">
+    <div className="py-2 px-1 lg:px-6">
       {langs.lang === "tr" && (
         <form className="flex flex-col space-y-4">
           {formData.experience.map((experienceItem, index) => (
             <div className="flex flex-col space-y-4" key={index}>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Şirket Adı
@@ -74,7 +74,7 @@ function ExperienceInfo() {
                   />
                 </div>
               </div>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Başlangıç Tarihi
@@ -168,7 +168,7 @@ function ExperienceInfo() {
         <form className="flex flex-col space-y-4">
           {formData.experience.map((experienceItem, index) => (
             <div className="flex flex-col space-y-4" key={index}>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Company Name
@@ -212,7 +212,7 @@ function ExperienceInfo() {
                   />
                 </div>
               </div>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Start Date

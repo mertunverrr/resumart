@@ -10,7 +10,7 @@ function InformationHeadings() {
   return (
     <div>
       {langs.lang === "tr" && (
-        <ul className="justify-around text-gray-400 border-b-2 relative my-4 pb-2 hidden md:flex">
+        <ul className="justify-around text-gray-400 border-b-2 relative my-4 pb-2 hidden md:flex ">
           <li
             className={
               state.value === 0

@@ -13,10 +13,14 @@ function Header() {
     signOut(auth);
   }, []);
   return (
-    <section className="bg-white">
+    <section className="bg-white ">
       {langs.lang === "tr" && (
         <div className="container flex justify-between py-6">
-          <img src={Logo} alt="resumart logo" className="w-40 cursor-pointer" />
+          <img
+            src={Logo}
+            alt="resumart logo"
+            className="w-28 lg:w-40 cursor-pointer"
+          />
           <div className="flex text-lg">
             {user ? (
               <>
@@ -25,7 +29,7 @@ function Header() {
                   <span className="text-mypurple ml-1">{user.displayName}</span>
                 </h1>
                 <button
-                  className="bg-mypurple text-white font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="bg-mypurple text-white font-semibold text-sm w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                   onClick={handleSignOut}
                 >
                   Çıkış yap
@@ -35,13 +39,13 @@ function Header() {
               <>
                 <Link
                   to="/login"
-                  className="mr-2 lg:mr-8 text-mypurple font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="mr-2 lg:mr-8 text-mypurple font-semibold text-sm lg:text-base w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                 >
                   Giriş yap
                 </Link>
                 <Link
                   to="/login"
-                  className="bg-mypurple text-white font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="bg-mypurple text-white font-semibold text-sm lg:text-base w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                 >
                   Kaydol
                 </Link>
@@ -52,7 +56,11 @@ function Header() {
       )}
       {langs.lang === "eng" && (
         <div className="container flex justify-between py-6">
-          <img src={Logo} alt="resumart logo" className="w-40 cursor-pointer" />
+          <img
+            src={Logo}
+            alt="resumart logo"
+            className="w-28 lg:w-40 cursor-pointer"
+          />
           <div className="flex text-lg">
             {user ? (
               <>
@@ -61,7 +69,7 @@ function Header() {
                   <span className="text-mypurple ml-1">{user.displayName}</span>
                 </h1>
                 <button
-                  className="bg-mypurple text-white font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="bg-mypurple text-white font-semibold text-sm w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                   onClick={handleSignOut}
                 >
                   Sign Out
@@ -71,15 +79,15 @@ function Header() {
               <>
                 <Link
                   to="/login"
-                  className="mr-2 lg:mr-8 text-mypurple font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="mr-2 lg:mr-8 text-mypurple font-semibold text-sm lg:text-base w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/login"
-                  className="bg-mypurple text-white font-semibold w-24 rounded-md hover:brightness-125 duration-300 text-center p-1"
+                  className="bg-mypurple text-white font-semibold text-sm lg:text-base w-18 lg:w-24 rounded-md hover:brightness-125 duration-300 text-center p-1 lg:p-1.5"
                 >
-                  Register
+                  Sign Up
                 </Link>
               </>
             )}

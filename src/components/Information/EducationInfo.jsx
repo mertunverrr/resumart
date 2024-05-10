@@ -24,12 +24,12 @@ function EducationInfo() {
     );
   };
   return (
-    <div className="py-2 px-6">
+    <div className="py-2 px-1 lg:px-6">
       {langs.lang === "tr" && (
         <form className="flex flex-col space-y-4">
           {formData.educationInfo.map((education, index) => (
             <div className="space-y-4 flex flex-col" key={index}>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Okul Adı
@@ -73,8 +73,8 @@ function EducationInfo() {
                   />
                 </div>
               </div>
-              <div className="flex space-x-10">
-                <div className="flex flex-col basis-1/3">
+              <div className="flex space-x-2 lg:space-x-8">
+                <div className="flex flex-col w-1/3">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Başlangıç Tarihi
                   </label>
@@ -97,7 +97,7 @@ function EducationInfo() {
                     }
                   />
                 </div>
-                <div className="flex flex-col basis-1/3">
+                <div className="flex flex-col w-1/3">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Bitiş Tarihi
                   </label>
@@ -120,7 +120,7 @@ function EducationInfo() {
                     }
                   />
                 </div>
-                <div className="flex flex-col basis-1/3">
+                <div className="flex flex-col w-1/3">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Mezuniyet Notu
                   </label>
@@ -168,7 +168,7 @@ function EducationInfo() {
         <form className="flex flex-col space-y-4">
           {formData.educationInfo.map((education, index) => (
             <div className="space-y-4 flex flex-col" key={index}>
-              <div className="flex space-x-10">
+              <div className="flex  space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/2">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     School Name
@@ -212,7 +212,7 @@ function EducationInfo() {
                   />
                 </div>
               </div>
-              <div className="flex space-x-10">
+              <div className="flex space-x-2 lg:space-x-8">
                 <div className="flex flex-col basis-1/3">
                   <label className="font-bold text-offblack text-sm mb-2 ml-1">
                     Start Date

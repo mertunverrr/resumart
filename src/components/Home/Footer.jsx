@@ -9,7 +9,7 @@ function Footer() {
   const langs = useSelector((store) => store.language);
   console.log(langs.lang);
   return (
-    <footer className="bg-mypurple p-8">
+    <footer className="bg-mypurple px-1 py-8 lg:p-8">
       <div className="container text-sm text-white flex justify-around">
         <div className="lg:flex">
           <img

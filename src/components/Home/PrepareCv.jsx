@@ -24,7 +24,7 @@ function PrepareCv() {
 
   const langs = useSelector((store) => store.language);
   return (
-    <section className="relative bg-white pt-20 pb-20">
+    <section className="relative bg-white pt-14 lg:pt-20 pb-10 lg:pb-16">
       {langs.lang === "tr" && (
         <div className="container flex-row lg:flex lg:space-x-16">
           <div className="flex justify-center lg:justify-normal">
@@ -34,7 +34,7 @@ function PrepareCv() {
               alt="Laptop"
             />
           </div>
-          <div className="text-offblack text-center lg:text-start mt-10 lg:mt-0 flex-col">
+          <div className="text-offblack text-center lg:text-start mt-10 px-2 lg:px-0 lg:mt-0 flex-col">
             <h1 className="font-extrabold text-2xl lg:text-3xl">
               Cv nasıl hazırlanır?
             </h1>
@@ -46,7 +46,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleFirst}
               >
                 Resumart'ı açın
@@ -54,8 +54,8 @@ function PrepareCv() {
               <p
                 className={
                   first
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 Kendi cv'nizi oluşturmak için Resumart'ı açın ve "CV Hazırlamaya
@@ -70,7 +70,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleSecond}
               >
                 Bilgilerinizi doldurun
@@ -78,8 +78,8 @@ function PrepareCv() {
               <p
                 className={
                   second
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 Eksiksiz bir şekilde sizden istenilen bilgileri doldurun.
@@ -93,7 +93,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleThird}
               >
                 Şablon seçin
@@ -101,8 +101,8 @@ function PrepareCv() {
               <p
                 className={
                   third
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 Size özel hazırlanmış şablonlardan birisini seçip tasarımınızı
@@ -125,7 +125,7 @@ function PrepareCv() {
               alt="Laptop"
             />
           </div>
-          <div className="text-offblack text-center lg:text-start mt-10 lg:mt-0 flex-col">
+          <div className="text-offblack text-center lg:text-start mt-10 px-2 lg:px-0 lg:mt-0 flex-col">
             <h1 className="font-extrabold text-2xl lg:text-3xl">
               How to prepare a CV?
             </h1>
@@ -137,7 +137,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleFirst}
               >
                 Open Resumart
@@ -145,8 +145,8 @@ function PrepareCv() {
               <p
                 className={
                   first
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 To create your own CV, open Resumart and click on the "Start
@@ -161,7 +161,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleSecond}
               >
                 Fill in your information
@@ -169,8 +169,8 @@ function PrepareCv() {
               <p
                 className={
                   second
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 Fill in all the requested information accurately.
@@ -184,7 +184,7 @@ function PrepareCv() {
               }
             >
               <h2
-                className="ml-4 font-bold cursor-pointer text-lg"
+                className="lg:ml-4 font-bold cursor-pointer text-lg"
                 onClick={handleThird}
               >
                 Select a template
@@ -192,8 +192,8 @@ function PrepareCv() {
               <p
                 className={
                   third
-                    ? "ml-0 lg:ml-4 text-sm  mt-1"
-                    : "ml-0 lg:ml-4 text-sm hidden mt-1"
+                    ? "ml-0 lg:ml-4 text-sm  mt-1 px-4 lg:px-0"
+                    : "ml-0 lg:ml-4 text-sm hidden mt-1 px-4 lg:px-0"
                 }
               >
                 You can choose one of the templates customized for you and

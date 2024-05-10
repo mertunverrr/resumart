@@ -40,16 +40,16 @@ function SkillLangProject() {
   return (
     <>
       {langs.lang === "tr" && (
-        <div className="px-6 pb-4 flex flex-col space-y-4">
+        <div className="px-1 lg:px-6 pb-4 flex flex-col space-y-4">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
             <div className="flex flex-col basis-1/2">
               <h2 className="font-bold text-xl text-offblack">Yetenekler</h2>
               {formData.skills.map((skill, index) => (
                 <div
-                  className="flex flex-row justify-around basis-1/2 mt-4 space-x-6"
+                  className="flex flex-row justify-around basis-1/2 mt-2 lg:mt-3 space-x-2 lg:space-x-4"
                   key={index}
                 >
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-6/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Yetenek Adı
                     </label>
@@ -70,7 +70,7 @@ function SkillLangProject() {
                       }
                     />
                   </div>
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-4/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Seviye
                     </label>
@@ -94,12 +94,12 @@ function SkillLangProject() {
                       <option value="expert">Uzman</option>
                     </select>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col basis-2/12 ">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                       Sil
                     </label>
                     <button
-                      className="next-button w-10"
+                      className="remove-button"
                       onClick={() =>
                         dispatch(
                           deleteArrayItem({
@@ -126,10 +126,10 @@ function SkillLangProject() {
               <h2 className="font-bold text-xl text-offblack">Diller</h2>
               {formData.languages.map((langItem, index) => (
                 <div
-                  className="flex flex-row justify-around basis-1/2 mt-4 space-x-6"
+                  className="flex flex-row justify-around basis-1/2 mt-2 lg:mt-3 space-x-2 lg:space-x-4"
                   key={index}
                 >
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-6/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Dil Adı
                     </label>
@@ -150,7 +150,7 @@ function SkillLangProject() {
                       }
                     />
                   </div>
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-4/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Seviye
                     </label>
@@ -168,18 +168,18 @@ function SkillLangProject() {
                         )
                       }
                     >
-                      <option value="beginner">Başlangıç</option>
-                      <option value="intermediate">Orta seviye</option>
-                      <option value="advanced">İleri seviye</option>
-                      <option value="expert">Uzman</option>
+                      <option value="başlangıç">Başlangıç</option>
+                      <option value="orta seviye">Orta seviye</option>
+                      <option value="ileri seviye">İleri seviye</option>
+                      <option value="uzman">Uzman</option>
                     </select>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col basis-2/12 ">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                       Sil
                     </label>
                     <button
-                      className="next-button w-10"
+                      className="remove-button"
                       onClick={() =>
                         dispatch(
                           deleteArrayItem({
@@ -219,16 +219,16 @@ function SkillLangProject() {
         </div>
       )}
       {langs.lang === "eng" && (
-        <div className="px-6 pb-4 flex flex-col space-y-4">
-          <div className="flex flex-col lg:flex-row lg:space-x-8">
+        <div className="px-1 lg:px-6 pb-4 flex flex-col space-y-4">
+          <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
             <div className="flex flex-col basis-1/2">
               <h2 className="font-bold text-xl text-offblack">Skills</h2>
               {formData.skills.map((skill, index) => (
                 <div
-                  className="flex flex-row justify-around basis-1/2 mt-4 space-x-6"
+                  className="flex flex-row justify-around basis-1/2 mt-2 lg:mt-3 space-x-2 lg:space-x-4"
                   key={index}
                 >
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-6/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Skill Name
                     </label>
@@ -249,7 +249,7 @@ function SkillLangProject() {
                       }
                     />
                   </div>
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-4/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Level
                     </label>
@@ -273,12 +273,12 @@ function SkillLangProject() {
                       <option value="expert">Expert</option>
                     </select>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col basis-2/12">
                     <label className="font-bold text-offblack text-sm mb-2 -ml-2">
                       Remove
                     </label>
                     <button
-                      className="next-button w-10"
+                      className="remove-button"
                       onClick={() =>
                         dispatch(
                           deleteArrayItem({
@@ -305,7 +305,7 @@ function SkillLangProject() {
               <h2 className="font-bold text-xl text-offblack">Languages</h2>
               {formData.languages.map((langItem, index) => (
                 <div
-                  className="flex flex-row justify-around basis-1/2 mt-4 space-x-6"
+                  className="flex flex-row justify-around basis-1/2 mt-2 lg:mt-3 space-x-2 lg:space-x-4"
                   key={index}
                 >
                   <div className="flex flex-col basis-1/2">
@@ -329,7 +329,7 @@ function SkillLangProject() {
                       }
                     />
                   </div>
-                  <div className="flex flex-col basis-1/2">
+                  <div className="flex flex-col basis-4/12">
                     <label className="font-bold text-offblack text-sm mb-2 ml-1">
                       Level
                     </label>
@@ -353,12 +353,12 @@ function SkillLangProject() {
                       <option value="expert">Expert</option>
                     </select>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col basis-2/12">
                     <label className="font-bold text-offblack text-sm mb-2 -ml-2">
                       Remove
                     </label>
                     <button
-                      className="next-button w-10"
+                      className="remove-button"
                       onClick={() =>
                         dispatch(
                           deleteArrayItem({

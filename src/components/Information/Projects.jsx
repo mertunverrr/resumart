@@ -28,10 +28,10 @@ function Projects() {
   return (
     <>
       {langs.lang === "tr" && (
-        <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
+        <div className="py-2 px-1 lg:px-6 flex flex-col space-y-4">
           {formData.projects.map((project, index) => (
-            <div className="flex flex-row space-x-2 lg:space-x-8" key={index}>
-              <div className="flex flex-col basis-1/5">
+            <div className="flex space-x-2 lg:space-x-8" key={index}>
+              <div className="flex flex-col w-3/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Proje İsmi
                 </label>
@@ -51,7 +51,7 @@ function Projects() {
                   }
                 ></input>
               </div>
-              <div className="flex flex-col basis-3/5">
+              <div className="flex flex-col w-7/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Proje Tanıtımı
                 </label>
@@ -71,12 +71,12 @@ function Projects() {
                   }
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-2/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Sil
                 </label>
                 <button
-                  className="next-button"
+                  className="remove-button"
                   onClick={() =>
                     dispatch(
                       deleteArrayItem({
@@ -111,12 +111,12 @@ function Projects() {
         </div>
       )}
       {langs.lang === "eng" && (
-        <div className="py-2 px-2 lg:px-6 flex flex-col space-y-4">
+        <div className="py-2 px-1 lg:px-6 flex flex-col space-y-4">
           {formData.projects.map((project, index) => (
             <div className="flex flex-row space-x-2 lg:space-x-8" key={index}>
-              <div className="flex flex-col basis-1/5">
+              <div className="flex flex-col w-3/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
-                  Project Name
+                  Project
                 </label>
                 <input
                   type="text"
@@ -134,7 +134,7 @@ function Projects() {
                   }
                 ></input>
               </div>
-              <div className="flex flex-col basis-3/5">
+              <div className="flex flex-col w-7/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1">
                   Project Information
                 </label>
@@ -154,12 +154,12 @@ function Projects() {
                   }
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-2/12">
                 <label className="font-bold text-offblack text-sm mb-2 ml-1 text-center">
                   Remove
                 </label>
                 <button
-                  className="next-button"
+                  className="remove-button"
                   onClick={() =>
                     dispatch(
                       deleteArrayItem({
