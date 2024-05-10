@@ -225,19 +225,18 @@ function DownloadCv() {
                       <li className="list-disc text-xs">
                         {formData.skills[index].skillName}
                       </li>
-                      <hr className="border-gray-300 border-2 w-24 mt-1.5 mr-4 rounded-lg " />
+                      <hr className="border-gray-300 border-2 w-24 mt-1.5 mr-3 rounded-lg " />
                       <hr
                         className={
-                          "border-mypurple border-2 max-w-24 absolute left-20 top-1.5  rounded-lg" +
-                          (formData.skills[index].skillLevel === "başlangıç"
+                          "border-mypurple border-2 max-w-24 absolute left-22 top-1.5  rounded-lg" +
+                          (formData.skills[index].skillLevel === "beginner"
                             ? " w-6"
                             : formData.skills[index].skillLevel ===
-                              "orta seviye"
+                              "intermediate"
                             ? " w-12"
-                            : formData.skills[index].skillLevel ===
-                              "ileri seviye"
+                            : formData.skills[index].skillLevel === "advanced"
                             ? " w-18"
-                            : formData.skills[index].skillLevel === "uzman"
+                            : formData.skills[index].skillLevel === "expert"
                             ? " w-24"
                             : "")
                         }

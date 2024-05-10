@@ -168,6 +168,7 @@ function SkillLangProject() {
                         )
                       }
                     >
+                      <option value="x">Seviye</option>
                       <option value="başlangıç">Başlangıç</option>
                       <option value="orta seviye">Orta seviye</option>
                       <option value="ileri seviye">İleri seviye</option>
@@ -347,6 +348,7 @@ function SkillLangProject() {
                         )
                       }
                     >
+                      <option value="y">Level</option>
                       <option value="beginner">Beginner</option>
                       <option value="intermediate">Intermediate</option>
                       <option value="advanced">Advanced</option>
